@@ -1,0 +1,33 @@
+.circle {
+  &__3 {
+    top: -140px;
+    right: calc(100% - 48px);
+  }
+
+  &__4 {
+    top: 267px;
+    left: calc(100% - 20px);
+  }
+}
+
+.small__title {
+  margin-bottom: 50px;
+  max-width: 517px;
+  text-align: center;
+}
+
+.content {
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 80px;
+  }
+}
+
+.more {
+  margin-top: 60px;
+}

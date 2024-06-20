@@ -1,0 +1,25 @@
+.circle {
+  &__3 {
+    top: -140px;
+    right: calc(100% - 48px);
+  }
+
+  &__4 {
+    top: 267px;
+    left: calc(100% - 20px);
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+@media(max-width: 1100px) {
+  .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

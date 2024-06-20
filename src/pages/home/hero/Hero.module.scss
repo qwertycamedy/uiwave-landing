@@ -1,0 +1,140 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100svh - var(--header-height));
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px !important;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row !important;
+  width: 100%;
+  min-height: calc(100svh - var(--header-height));
+  position: relative;
+  z-index: 1;
+}
+
+.bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  width: 73svw;
+  &__1 {
+    transform: translate(-55%, -43%);
+  }
+  &__2 {
+    transform: translate(-30%, -49%);
+  }
+}
+
+.info {
+  max-width: 645px;
+  width: 100%;
+}
+
+.subtitle {
+  max-width: 560px;
+  margin-bottom: 44px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn {
+  padding: 14px 35px !important;
+}
+
+.img {
+  &__outer {
+    position: absolute;
+    left: 53%;
+    width: 55svw;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: unset;
+    flex-shrink: inherit;
+    position: absolute;
+    left: -1px;
+    top: -5.5%;
+    z-index: -1;
+    object-fit: contain;
+  }
+
+  width: inherit;
+  left: 1px;
+  flex-shrink: inherit;
+  object-fit: contain;
+
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 1100px) {
+    .hero {
+        min-height: auto;
+        margin-bottom: 70px !important;
+    }
+  .inner {
+    flex-direction: column !important;
+    gap: 51px;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .bg {
+    max-width: 150svw;
+    width: 150svw;
+    top: 0;
+
+    &__1 {
+      transform: translate(-55%, -15%);
+    }
+    &__2 {
+      transform: translate(-35%, -30%);
+    }
+  }
+
+  .title {
+    margin-bottom: 14px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+
+  .btn {
+    max-width: 100% !important;
+  }
+
+  .img {
+    &__outer {
+      position: relative;
+      left: 0px;
+      width: 100%;
+      flex-shrink: unset;
+    }
+    &__wrapper {
+      left: -1px;
+      top: -5%;
+      width: calc(100% + 2px);
+    }
+
+    width: 100%;
+    border-radius: 2px;
+  }
+}
